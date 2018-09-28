@@ -1,0 +1,62 @@
+
+<body ng-app="myApp">
+ <div class="add-img">
+<!--<div class="container">-->
+ 
+  <div ng-show="error" class="alert alert-danger">{{errorMessage}}</div>
+  <div ng-show="success" class="alert alert-success">{{successMessage}}</div>
+  <h2><b>Add to the product in admin page</b></h2> 
+  <form align="center" ng-submit= "add()">
+
+       
+       
+    <div class="form-group">
+   
+     <div class = "col-xs-4  ">
+      <label>id</label>
+      <input type="text" class="form-control" ng-model="addForm.id" >
+    </div>
+    <div class="col-xs-4">
+      <label>name</label>
+      <input type="text" class="form-control" ng-model="addForm.name">
+    </div>
+
+    <div class="col-xs-4">
+      <label>model_no</label>
+      <input type="text" class="form-control" ng-model="addForm.model_no">
+    </div>
+
+   <div class="col-xs-4">
+      <label>color</label>
+      <input type="text" class="form-control" ng-model="addForm.color">
+    </div>
+   <div class="col-xs-4">
+      <label>size</label>
+      <input type="text" class="form-control"ng-model="addForm.size">
+    </div>
+<div class="col-xs-4" height="2.4">
+      <label>category</label>
+      <!-- <select>
+        <option value="saree">Modern</option>
+        <option value="chudithar">traditional</option>
+        
+      </select> -->
+       <input type="text" class="form-control"ng-model="addForm.category"> 
+    </div>
+<div class="col-xs-4">
+      <label>mfg_date</label>
+      <input type="text" class="form-control" ng-model="addForm.mfg_date">
+    </div>
+<div class="col-xs-4">
+      <label>price</label>
+      <input type="text" class="form-control" ng-model="addForm.price">
+    </div>
+<div>
+  <button type="submit" class="btn btn-default">Add </button>
+
+  </form>
+</div>
+
+
+</body>
+</html>

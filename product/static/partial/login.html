@@ -1,0 +1,60 @@
+<body ng-app="myApp" class="id" >
+<div align="center" >
+  <div ng-show="error" class="alert alert-danger">{{errorMessage}}</div>
+<form class="form" ng-submit="login()">
+<div class = "login-img">
+    <div class = "row">
+      <div class = "col-lg-12"> 
+       <div class="imgcontainer">
+ 
+       <img src="/static/images1.jpg" alt="image" class="image">
+ </div>
+
+
+<div  class="col-lg-12">
+        <div class = "col-lg-3 text-right">
+         
+        <label for="uname"><b>Email</b></label>
+        </div>
+        <div class = "col-lg-6">
+           <input type="text" class = "form-control" ng-model="loginForm.email" name="email" placeholder="Enter email" required>
+        </div> 
+        
+      </div>
+      <div class = "col-lg-12">
+        <div class = "col-lg-3 text-right">
+           <label for="psw"><b>Password</b></label>
+        </div>
+        <div class = "col-lg-6">
+           <input type="password" class = "form-control"  placeholder="Enter Password" name="psw" ng-model="loginForm.password" required> </div>
+      </div>
+       
+        <div class="form-actions"> 
+        <button type="submit" class="btn btn-info"ng-disabled="disabled">Login</button>
+          
+      </div>
+
+      
+      <div>
+        <label class="container">Remember me
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </div>
+
+      <div class="form-actions">
+        
+        <button type="button" class="button">cancel</button>
+      </div>
+
+  <div>
+ <a href="#/register" class="btn btn-link">Register</a>       
+</div>
+
+</form>
+</body>
+
+
+  
+
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+    <script type="text/javascript">
+        var app = angular.module('myApp', [])
+        app.controller('searchController', function ($scope) {
+            $scope.IsVisible = false;
+            $scope.search = function () {
+                $scope.search = [
+                { CustomerId: 1, Name: "John Hammond", Country: "United States" },
+                { CustomerId: 2, Name: "Mudassar Khan", Country: "India" },
+                { CustomerId: 3, Name: "Suzanne Mathews", Country: "France" },
+                { CustomerId: 4, Name: "Robert Schidner", Country: "Russia" }
+               ];
+                $scope.IsVisible = true;
+            };
+        });
+    </script>
+    <div ng-app="myApp" ng-controller="searchController">
+        
+    
+        <table cellpadding="0" cellspacing="0" ng-show="IsVisible">
+            <tr>
+                <th>Customer Id</th>
+                <th>Name</th>
+                <th>Country</th>
+            </tr>
+            <tbody ng-repeat="m in Customers">
+                <tr>
+                    <td>{{m.CustomerId}}</td>
+                    <td>{{m.Name}}</td>
+                    <td>{{m.Country}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

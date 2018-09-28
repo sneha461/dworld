@@ -1,0 +1,145 @@
+<body ng-app="myApp">
+  <div class="search-img"> 
+ 
+    <h3><b>search for products:</b></h3>
+ <form  ng-submit="search()">
+
+  <!-- <input type="button" class="btn btn-default"  value="id">-->
+     <label><b>id</b></label>
+     <input type="text" class="btn btn-default"  ng-model="searchForm.id">
+ 
+     <button type="submit" class="btn btn-primary active" ng-click="search()" >search </button>
+ </form>
+
+ <div ng-controller="searchController">
+     <h2>List to the product table</h2>
+
+  <table class="table table-bordered" >
+  
+  <tr >
+  <th>id</th>
+  <th>name</th>
+  <th>model_no</th>
+  <th>color</th>
+  <th>category</th>
+  <th>size</th>
+  <th>mfg_date</th>
+  <th>price</th>
+</tr>
+
+  <tr  ng-repeat="item in search">
+  <td>{{item.id}}</td>
+  <td>{{item.name}}</td>
+  <td>{{item.model_no}}</td>
+  <td>{{item.color}}</td>
+  <td>{{items.category}}</td>
+  <td>{{item.size}}</td>
+  <td>{{item.mfg_date}}</td>
+  <td>{{item.price}}</td>
+ </tr>   
+
+</table>
+</div>
+ <!-- <script>
+  var app = 
+angular.module("myApp",[]);
+  app.controller("searchController",['$scope',function ($scope){
+    $scope.search = [
+  {
+    "category": "modern", 
+    "color": "red", 
+    "id": 101, 
+    "mfg_date": "Tue, 25 Sep 2018 15:51:28 GMT", 
+    "model_no": 1001, 
+    "name": "top", 
+    "price": 1000.0, 
+    "size": 28
+  }
+]
+
+  }]);
+  
+</script> 
+</div>
+</div> -->
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <script>  
+           var myapp=angular.module("myApp",[]);  
+           myapp.filter('displayPageData', function() {  
+                             return function(input, start) {  
+                             start = +start; //parse to int  
+                             return input.slice(start);  
+                             }  
+                        });  
+           myApp.controller("searchController",function($scope){  
+                $scope.currentPage = 0;  
+  
+           $scope.search=[
+           {id:"101",name:"top",model_no:"1001",color:"red",category:"modern",size:"28",mfg_date:"25-9-2018",price:"1000"}];
+           });  
+
+
+
+
+          
+  
+      </script>  
+      <BODY ng-controller="searchController">  
+        <table border="1" style="width:80%">  
+        <caption>  
+        <h2>product List</h2>  
+        </caption>  
+            <thead>  
+                <tr>  
+                    <th>id</th>
+                    <th>name</th>  
+                    <th>model_no</th>  
+                    <th>color</th>  
+                    <th>category</th>
+                    <th>size</th>
+                    <th>mfg_date</th>
+                    <th>price</th>  
+                </tr>  
+            </thead>  
+            <tbody>  
+                <tr ng-repeat="student in search">  
+                   <td>{{student.id}}</td>  
+                    <td>{{student.name}}</td>  
+                    <td>{{student.model_no}}</td>  
+                    <td>{{student.color}}</td> 
+                    <td>{{student.category}}</td> 
+                    <td>{{student.size}}</td> 
+                    <td>{{student.mfg_dater}}</td> 
+                    <td>{{student.price}}</td>  
+                </tr>  
+            </tbody>   -->
+
+
+
+ 
+
+
+
+
+
+  

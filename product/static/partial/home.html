@@ -1,0 +1,43 @@
+
+<body  ng-app="myApp" >
+
+
+
+<div >
+<div class="btn" >
+  
+  <div class="h1">
+  <h1><b>Designer World In Product<b></h1>
+  <div ng-controller="addController">
+   
+
+     <a href="#/add" class="btn btn-info">Add</a>
+
+  </div>
+
+  <div ng-controller="searchController" >
+
+     <a href="#/search" class="btn btn-success">search</a>
+  </div>
+
+  <div ng-controller="updateController">
+  
+    <a href="#/update" class="btn btn-warning" margin="30px 40px">Update</a>
+  </div>
+
+  <div ng-controller="removeController">
+  
+     <a href="#/remove" class="btn btn-danger">Remove</a>
+  </div>
+
+<div ng-controller="logoutController">
+    <button ng-click='logout()' class="btn btn-primary">logout </button>
+</div>
+
+</div>
+
+
+
+
+</body>
+</html>

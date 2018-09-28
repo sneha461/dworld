@@ -1,0 +1,62 @@
+<body ng-app="myApp">
+<!--<div class="container">-->
+<div class="update-img">
+
+  <div ng-show="error" class="alert alert-danger">{{errorMessage}}</div>
+  <div ng-show="success" class="alert alert-success">{{successMessage}}</div>
+
+<div class="upcolor">
+  <h2>Update to the product in admin page</h2> 
+
+  <form align="center" ng-submit= "update()">
+
+       
+       
+    <div class="form-group">
+   
+     <div class = "col-xs-4  ">
+      <label>id</label>
+      <input type="text" class="form-control" ng-model="updateForm.id" >
+    </div>
+    <div class="col-xs-4">
+      <label>name</label>
+      <input type="text" class="form-control" ng-model="updateForm.name">
+    </div>
+    <div class="col-xs-4">
+      <label>model_no</label>
+      <input type="text" class="form-control" ng-model="updateForm.batch_no">
+    </div>
+
+   <div class="col-xs-4">
+      <label>color</label>
+      <input type="text" class="form-control" ng-model="updateForm.color">
+    </div>
+   <div class="col-xs-4">
+      <label>size</label>
+      <input type="text" class="form-control"ng-model="updateForm.size">
+    </div>
+<div class="col-xs-4">
+      <label>category</label>
+      <input type="text" class="form-control"ng-model="updateForm.category">
+    </div>
+<div class="col-xs-4">
+      <label>mfg_date</label>
+      <input type="text" class="form-control" ng-model="updateForm.mfg_date">
+    </div>
+<div class="col-xs-4">
+      <label>price</label>
+      <input type="text" class="form-control" ng-model="updateForm.price">
+    </div>
+    <div>
+       <button type="submit" class="btn btn-default">Update </button>
+
+
+</div>
+</div>
+
+</div>
+
+
+</form>
+</body>
+</html>
