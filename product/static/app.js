@@ -4,11 +4,11 @@ var myApp = angular.module('myApp', ['ngRoute']);
 myApp.config(function ($routeProvider) {
   
   $routeProvider
-    .when('/', {
+    .when('/home', {
       templateUrl: '/static/partial/home.html'
     })
 
-    .when('/login', {
+    .when('/', {
       templateUrl: '/static/partial/login.html',
       controller: 'loginController'
     })

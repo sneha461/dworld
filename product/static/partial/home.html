@@ -3,35 +3,39 @@
 
 
 
-<div >
-<div class="btn" >
+<div class="home-img" >
+<div class="btnhome" >
+
+
+
   
-  <div class="h1">
-  <h1><b>Designer World In Product<b></h1>
-  <div ng-controller="addController">
+  <div class="h1" style="padding:46px">
+  <h1 style="color:white">Add / Modify Products here</h1>
+  <div  class="btnhome" ng-controller="addController">
    
 
-     <a href="#/add" class="btn btn-info">Add</a>
+     <a href="#/add" class="btn btn-info" style="width:364px">Add Product</a>
 
   </div>
 
   <div ng-controller="searchController" >
 
-     <a href="#/search" class="btn btn-success">search</a>
+     <a href="#/search" class="btn btn-success" style="width: 364px">Search Product</a>
   </div>
 
   <div ng-controller="updateController">
   
-    <a href="#/update" class="btn btn-warning" margin="30px 40px">Update</a>
+    <a href="#/update" class="btn btn-warning" style="width: 364px">Update Product</a>
   </div>
 
   <div ng-controller="removeController">
   
-     <a href="#/remove" class="btn btn-danger">Remove</a>
+     <a href="#/remove" class="btn btn-danger" style="width: 364px">Delete Product</a>
   </div>
 
 <div ng-controller="logoutController">
-    <button ng-click='logout()' class="btn btn-primary">logout </button>
+ 
+ <a href="#/"class="btn btn-primary" style="width: 364px">Logout</a>
 </div>
 
 </div>

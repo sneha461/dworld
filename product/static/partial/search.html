@@ -1,67 +1,62 @@
 <body ng-app="myApp">
   <div class="search-img"> 
- 
-    <h3><b>search for products:</b></h3>
- <form  ng-submit="search()">
+     <div ng-controller="searchController">
 
-  <!-- <input type="button" class="btn btn-default"  value="id">-->
-     <label><b>id</b></label>
-     <input type="text" class="btn btn-default"  ng-model="searchForm.id">
+
+
+  <div ng-show="error" class="alert alert-danger text-center">{{errorMessage}}</div>
+  <div ng-show="success" class="alert alert-success text-center">{{successMessage}}</div>
  
-     <button type="submit" class="btn btn-primary active" ng-click="search()" >search </button>
+    <h2>Search for Products</h2>
+ <form  name=searchForm ng-submit="search()">
+
+  
+     <label><b>Search for Id</b></label>
+     <input type="text" text-align="center" class="inputa"   ng-model="searchForm.id" style="width:250px;padding: 9px 20px ">
+
+
+      <span style="color:red" ng-show="searchForm.id.$dirty && searchForm.id.$invalid">
+          <span ng-show="searchForm.id.$error.required">Id is required.</span>
+          <span ng-show="searchForm.id.$error.id">Invalid Id.</span>
+          </span>
+ 
+     <button type="submit" class="inputa" ng-click="search()" style="width: 141px">Search </button>
  </form>
 
- <div ng-controller="searchController">
-     <h2>List to the product table</h2>
+ <div >
+     <h3 text-align="center">Product Details</h3>
 
-  <table class="table table-bordered" >
+  <table class="table table-bordered"style="width: 70%;max-width: 70%;margin-bottom:21px;margin-left: 257px;border:4px soilid #dddddd;" >
+  
   
   <tr >
-  <th>id</th>
-  <th>name</th>
-  <th>model_no</th>
-  <th>color</th>
-  <th>category</th>
-  <th>size</th>
-  <th>mfg_date</th>
-  <th>price</th>
+  <th>Id</th>
+  <th>Name</th>
+  <th>Model_no</th>
+  <th>Color</th>
+  <th>Category</th>
+  <th>Size</th>
+  <th>Mfg Date</th>
+  <th>Price</th>
 </tr>
 
-  <tr  ng-repeat="item in search">
-  <td>{{item.id}}</td>
-  <td>{{item.name}}</td>
-  <td>{{item.model_no}}</td>
-  <td>{{item.color}}</td>
-  <td>{{items.category}}</td>
-  <td>{{item.size}}</td>
-  <td>{{item.mfg_date}}</td>
-  <td>{{item.price}}</td>
+  <tr  ng-repeat="x in search">
+  <td>{{x.id}}</td>
+  <td>{{x.name}}</td>
+  <td>{{x.model_no}}</td>
+  <td>{{x.color}}</td>
+  <td>{{x.category}}</td>
+  <td>{{x.size}}</td>
+  <td>{{x.mfg_date}}</td>
+  <td>{{x.price}}</td>
  </tr>   
 
 </table>
 </div>
- <!-- <script>
-  var app = 
-angular.module("myApp",[]);
-  app.controller("searchController",['$scope',function ($scope){
-    $scope.search = [
-  {
-    "category": "modern", 
-    "color": "red", 
-    "id": 101, 
-    "mfg_date": "Tue, 25 Sep 2018 15:51:28 GMT", 
-    "model_no": 1001, 
-    "name": "top", 
-    "price": 1000.0, 
-    "size": 28
-  }
-]
-
-  }]);
-  
-</script> 
 </div>
-</div> -->
+</div>
+
+
 </body>
 
 
@@ -81,58 +76,6 @@ angular.module("myApp",[]);
 
 
 
-
-
-<!-- <script>  
-           var myapp=angular.module("myApp",[]);  
-           myapp.filter('displayPageData', function() {  
-                             return function(input, start) {  
-                             start = +start; //parse to int  
-                             return input.slice(start);  
-                             }  
-                        });  
-           myApp.controller("searchController",function($scope){  
-                $scope.currentPage = 0;  
-  
-           $scope.search=[
-           {id:"101",name:"top",model_no:"1001",color:"red",category:"modern",size:"28",mfg_date:"25-9-2018",price:"1000"}];
-           });  
-
-
-
-
-          
-  
-      </script>  
-      <BODY ng-controller="searchController">  
-        <table border="1" style="width:80%">  
-        <caption>  
-        <h2>product List</h2>  
-        </caption>  
-            <thead>  
-                <tr>  
-                    <th>id</th>
-                    <th>name</th>  
-                    <th>model_no</th>  
-                    <th>color</th>  
-                    <th>category</th>
-                    <th>size</th>
-                    <th>mfg_date</th>
-                    <th>price</th>  
-                </tr>  
-            </thead>  
-            <tbody>  
-                <tr ng-repeat="student in search">  
-                   <td>{{student.id}}</td>  
-                    <td>{{student.name}}</td>  
-                    <td>{{student.model_no}}</td>  
-                    <td>{{student.color}}</td> 
-                    <td>{{student.category}}</td> 
-                    <td>{{student.size}}</td> 
-                    <td>{{student.mfg_dater}}</td> 
-                    <td>{{student.price}}</td>  
-                </tr>  
-            </tbody>   -->
 
 
 
