@@ -118,9 +118,9 @@ def updateProduct():
         return badRequest(status)
    
     try:
-        print('ll')
+        
         Product.query.filter_by(id=json_data['id']).update(dict(name=json_data['name'],model_no=json_data['model_no'],color=json_data['color'],category=json_data['category'],size=json_data['size'],price=json_data['price']))
-        print('rr') 
+        
         db.session.commit() 
         status = 'updated success'
     except :
