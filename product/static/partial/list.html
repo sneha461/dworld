@@ -1,0 +1,55 @@
+<body ng-app="myApp">
+	
+  <div class="list-img"> 
+     <div ng-controller="listController" ng-init="loadProduct()">
+
+
+ <div >
+     <h3 text-align="center">Product Details</h3>
+
+  <table class="table table-bordered"  style="width: 70%;max-width: 70%;margin-bottom:21px;margin-left: 257px;border:4px soilid #dddddd;" ng-model="getlist" >
+  
+  
+  <tr>
+  <th>Id</th>
+  <th>Name</th>
+  <th>Model_no</th>
+  <th>Color</th>
+  <th>Category</th>
+  <th>Size</th>
+  <th>Mfg Date</th>
+  <th>Price</th>
+</tr>
+
+  <tr  ng-repeat="data in getlist">
+  <td>{{data.id}}</td>
+  <td>{{data.name}}</td>
+  <td>{{data.model_no}}</td>
+  <td>{{data.color}}</td>
+  <td>{{data.category}}</td>
+  <td>{{data.size}}</td>
+  <td>{{data.mfg_date}}</td>
+  <td>{{data.price}}</td>
+ </tr>   
+
+</table>
+</div>
+<div>
+<button class="previous" ng-click='previousPage()'style="background-color: #008cba;width:12%;margin-left: -630px">&laquo; Previous</button>
+</div>
+
+<div>
+<button class="next" ng-click='nextPage()' style="background-color: #008cba;width: 12%;margin-right: -875px;margin-top: -10px">Next &raquo;</button>
+</div>
+
+
+
+</div>
+</div>
+
+
+
+</body>
+
+
+

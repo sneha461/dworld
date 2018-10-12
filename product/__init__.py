@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from product.config import BaseConfig
 from product.exception import badRequest,internalServerError
 
+# from flask_paginate import Pagination,get_page_parameter,get_page_args
 
 
 
@@ -16,6 +17,7 @@ db = SQLAlchemy(app)
 
 from product.models import User
 from product.models import Product
+# from product.models import Pagination
 
 @app.route("/")
 def home():
@@ -156,6 +158,54 @@ def getProducts(id):
    
     products = Product.query.get(id)
     return jsonify([products.toDict()])
+
+
+
+@app.route('/api/product/list',methods=['GET'])
+def listProducts():
+    offset = request.args.get('offset')  
+    limit =request.args.get('limit')
+    print(offset)
+    print(limit)
+    products = Product.query.offset(offset).limit(limit).all() 
+    productsArr = []
+    for product in products:
+        productsArr.append(product.toDict())
+    return jsonify(productsArr)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# def my_route():
+#      page = request.args.get('page', default = 1, type = int)
+
+# @app.route('/list',methods=['GET'])
+# def show_product():
+      
+
+  
+#     products = Product.query.all() 
+#     product_id = request.args.get('offset(0).limit(2)')  
+#     productsArr = []
+#     for product in products:
+#         productsArr.append(product.toDict())
+
+#     return jsonify([productsArr])
+
+
 
 
 

@@ -109,4 +109,7 @@ function add(id,name,model_no,color,category,size,mfg_date,price) {
      
       return deferred.promise;
     }
+
+
+
 }]);

@@ -49,6 +49,10 @@ myApp.config(function ($routeProvider) {
       templateUrl:'static/partial/search.html',
       controller: 'searchController'
     })
+    .when('/list',{
+      templateUrl:'static/partial/list.html',
+      controller:'listController'
+    })
 });
 
 

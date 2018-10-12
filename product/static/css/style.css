@@ -66,6 +66,27 @@ body {font-family: Arial, Helvetica, sans-serif;
     padding-left: 50px;
     text-align: center;
 }
+
+/*.list-img{
+    background-image: url(https://sites.create-cdn.net/siteimages/38/6/3/386311/12/4/3/12437933/1000x1000.jpg?1465392310);
+    margin: 40px 40px;
+    margin-right: -72px;
+    margin-left: -307px;
+    height: 612px;
+    margin-top: -25px;
+    padding-left: 50px;
+    text-align: center;
+});*/
+    /*margin: 40px 40px;
+    margin-right: -72px;
+    margin-left: -307px;
+    height: 612px;
+    margin-top: -25px;
+    padding-left: 50px;
+    text-align: center;
+}
+*/
+
 .login-img{
    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmn_HKWA3uiQ23PpjDHc7pm4XpmEno_2Iq2IO0o9I_lSrzKCQd); 
    margin: 10px 40px;
@@ -368,3 +389,36 @@ span.psw {
     .cancelbtn {
        width: 50%;
     }
+
+.pagination-page-info {
+    padding: .6em;
+    padding-left: 0;
+    width: 40em;
+    margin: .5em;
+    margin-left: 0;
+    font-size: 12px;
+}
+.pagination-page-info b {
+    color: black;
+    background: #6aa6ed;
+    padding-left: 2px;
+    padding: .1em .25em;
+    font-size: 150%;
+}
+.btn btn-primary {
+    display: inline-block;
+    margin-bottom: -22px;
+    margin-right: -6px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 8px 12px;
+    font-size: 15px;
+    line-height: 1.4;
+    border-radius: 0;

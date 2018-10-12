@@ -164,3 +164,65 @@ angular.module('myApp').controller('searchController',
  };
 
   }]);
+
+
+ 
+
+ angular.module('myApp').controller('listController',
+       ['$scope','$location','ProductService','$http',
+       function ($scope, $location,ProductService,$http) {
+         
+         
+         $scope.page = 1;
+         $scope.limit = 3;
+        
+         $scope.loadProduct = function(){
+          $http.get('/api/product/list?offset=' +$scope.page + '&limit=' + $scope.limit)
+          .success(function(data){
+            
+        
+            $scope.getlist = data;
+           
+             
+          });
+          };
+        
+          $scope.nextPage = function() {
+                   
+                    $scope.page++;
+                    $scope.loadProduct();
+               
+            };
+            
+            $scope.previousPage = function() {
+                if ($scope.page > 1) {
+                    $scope.page--;
+                    $scope.loadProduct();
+                  
+                }
+
+            };
+
+ 
+
+//          $scope.list = function() {
+
+
+//           $http.get('/api/product/list' )
+//           .success(function (data, status,response) {
+        
+//            $scope.getlist=data[0]; 
+
+// }) 
+   
+//     };
+}]);
+
+           
+               
+
+             
+               
+            
+
+ 

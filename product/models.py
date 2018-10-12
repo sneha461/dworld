@@ -3,7 +3,9 @@
 
 import datetime
 from product import db, bcrypt
-from flask_sqlalchemy import inspect 
+from flask_sqlalchemy import inspect
+from flask_paginate import Pagination 
+# from math import ceil
 
 
 class User(db.Model):
@@ -66,5 +68,14 @@ class Product(db.Model):
     def toDict(self):
         return { c.key: getattr(self, c.key) for c in inspect(self).mapper.column_attrs}
 
+    def get_users(offset=0, per_page=5):
+        return products[offset: offset + per_page]
+
+
+
     def __repr__(self):
         return '<Product {0}>'.format(self.id)
+
+
+
+
